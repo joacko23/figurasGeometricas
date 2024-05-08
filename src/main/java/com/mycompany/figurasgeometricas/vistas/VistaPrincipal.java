@@ -4,6 +4,7 @@ package com.mycompany.figurasgeometricas.vistas;
 import com.mycompany.figurasgeometricas.controladores.FigurasControl;
 import com.mycompany.figurasgeometricas.modelo.Circulo;
 import com.mycompany.figurasgeometricas.modelo.Cuadrado;
+import com.mycompany.figurasgeometricas.modelo.Poligono;
 import com.mycompany.figurasgeometricas.modelo.Triangulo;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -18,7 +19,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     private JFrame ventanaActual;
     FigurasControl figurasControl;
-    private final Class<?>[] clasesFiguras = {Cuadrado.class, Triangulo.class, Circulo.class};
+    private final Class<?>[] clasesFiguras = {Cuadrado.class, Triangulo.class, Circulo.class, Poligono.class};
     
     public VistaPrincipal() throws SQLException {
         figurasControl = FigurasControl.GetInstance();
@@ -179,6 +180,28 @@ public class VistaPrincipal extends javax.swing.JFrame {
                     vistaCirculo.setVisible(true);
                     
                     ventanaActual = vistaCirculo;
+                    
+                    this.setVisible(false);
+                    break;
+                case "Poligono":
+                    if (ventanaActual != null) {
+                        ventanaActual.dispose();
+                    }
+                    
+                    VistaPoligono vistaPoligono = null;
+                    vistaPoligono = new VistaPoligono();
+                    
+                    vistaPoligono.addWindowListener(new WindowAdapter() {
+                        @Override
+                        public void windowClosed(WindowEvent e) {
+                            
+                            setVisible(true);
+                        }
+                    });
+                    
+                    vistaPoligono.setVisible(true);
+                    
+                    ventanaActual = vistaPoligono;
                     
                     this.setVisible(false);
                     break;

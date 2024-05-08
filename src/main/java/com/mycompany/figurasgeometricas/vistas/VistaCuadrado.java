@@ -25,7 +25,7 @@ public class VistaCuadrado extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
         lblMedidas = new javax.swing.JLabel();
         lblLadoC = new javax.swing.JLabel();
         txtLadoCuadrado = new javax.swing.JTextField();
@@ -42,10 +42,10 @@ public class VistaCuadrado extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTitulo.setText("Cuadrado");
 
-        jButton1.setText("Volver");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnVolverActionPerformed(evt);
             }
         });
 
@@ -64,11 +64,11 @@ public class VistaCuadrado extends javax.swing.JFrame {
 
         lblPerimetro.setText("Perimetro:");
 
-        lblMedidaPerimetro.setText("Medida");
+        lblMedidaPerimetro.setText("Total");
 
         lblArea.setText("Area:");
 
-        lblMedidaArea.setText("Medida");
+        lblMedidaArea.setText("Total");
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +85,7 @@ public class VistaCuadrado extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(71, 71, 71)
                         .addComponent(lblTitulo))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -107,14 +107,14 @@ public class VistaCuadrado extends javax.swing.JFrame {
                                 .addComponent(lblArea)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblMedidaArea)))))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnVolver)
                     .addComponent(lblTitulo))
                 .addGap(38, 38, 38)
                 .addComponent(lblMedidas)
@@ -165,7 +165,7 @@ public class VistaCuadrado extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnCalcularActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         this.setVisible(false);
         VistaPrincipal vistaPrincipal = null;
         try {
@@ -174,7 +174,7 @@ public class VistaCuadrado extends javax.swing.JFrame {
             Logger.getLogger(VistaCuadrado.class.getName()).log(Level.SEVERE, null, ex);
         }
         vistaPrincipal.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         txtLadoCuadrado.setText("");
@@ -188,7 +188,7 @@ public class VistaCuadrado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnLimpiar;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblArea;
     private javax.swing.JLabel lblLadoC;

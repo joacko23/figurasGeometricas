@@ -3,6 +3,7 @@ package com.mycompany.figurasgeometricas.controladores;
 
 import com.mycompany.figurasgeometricas.modelo.Circulo;
 import com.mycompany.figurasgeometricas.modelo.Cuadrado;
+import com.mycompany.figurasgeometricas.modelo.Poligono;
 import com.mycompany.figurasgeometricas.modelo.Triangulo;
 import java.sql.SQLException;
 
@@ -62,4 +63,18 @@ public class FigurasControl {
         float perimetro = circulo.calcularPerimetro(circulo);
         return perimetro;
     }
+    
+    public float calcularSuperficiePoligono(int lados, float longitudLados){
+        Poligono poligono = new Poligono(lados, longitudLados);
+        float superficie = poligono.calcularSuperficie(poligono);
+        return superficie;
+    }
+    
+    public float calcularPerimetroPoligono(int lados, float longitudLados){
+        Poligono poligono = new Poligono(lados, longitudLados);
+        float perimetro = poligono.calcularPerimetro(poligono);
+        return perimetro;
+    }
+    
+            
 }

@@ -64,11 +64,11 @@ public class VistaCirculo extends javax.swing.JFrame {
 
         lblPerimetro.setText("Perimetro:");
 
-        lblMedidaPerimetro.setText("Medida");
+        lblMedidaPerimetro.setText("Total");
 
         lblArea.setText("Area:");
 
-        lblMedidaArea.setText("Medida");
+        lblMedidaArea.setText("Total");
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class VistaCirculo extends javax.swing.JFrame {
                                 .addComponent(lblArea)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblMedidaArea)))))
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
